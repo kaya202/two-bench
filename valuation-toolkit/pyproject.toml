@@ -1,0 +1,21 @@
+[project]
+name = "valuation-toolkit"
+version = "0.1.0"
+description = "Modular DCF / trading comps / precedent transactions valuation engine with a credit-analysis (leverage capacity & downside recovery) overlay."
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "yfinance>=0.2.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "jupyter>=1.0"]
+
+[tool.setuptools]
+packages = ["valuation", "data"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

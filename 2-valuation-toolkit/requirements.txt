@@ -1,0 +1,10 @@
+# Pinned to the exact versions this toolkit was built and tested against.
+# yfinance in particular wraps Yahoo Finance's undocumented internal API and
+# has broken across versions before -- if you hit fetch errors on a newer
+# yfinance, try pinning back to this version first.
+pandas==3.0.5
+numpy==2.5.2
+matplotlib==3.11.1
+yfinance==1.7.0
+pytest==9.1.1
+jupyter==1.1.1

@@ -3,7 +3,7 @@
 [![tests](https://github.com/OWNER/REPO/actions/workflows/tests.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/tests.yml)
 
 Python valuation engine — DCF, trading comparables, and precedent
-transactions — built around a **credit-analysis overlay** that every method
+transactions built around a **credit-analysis overlay** that every method
 feeds into: given an Enterprise Value from any of the three, what can this
 company support in debt, and what does a lender actually recover if it
 doesn't work out? 
@@ -15,7 +15,7 @@ trading comps against a live-pulled cruise-line peer set, real sourced M&A
 precedent transactions, and a leverage-capacity / downside-recovery credit
 overlay. Carnival was picked specifically for the credit overlay: its net
 leverage peaked around **6.8x at the end of 2023** and has been paid down
-to roughly **3.1x–3.4x** since — a real, recent leverage path that the
+to roughly **3.1x–3.4x** since recent leverage path that the
 credit overlay's 3x–6x sweep directly brackets, rather than a hypothetical
 stress range.
 
@@ -29,11 +29,11 @@ Both charts are real output from the walkthrough notebook, not mockups —
 see [Known limitations](#known-limitations) for the full reasoning. The
 credit overlay chart is the point of the whole project: at CCL's real
 current leverage (~3x), a severe downside still leaves lenders whole; at
-6x — close to where Carnival actually sat in 2023 — interest coverage
+6x close to where Carnival actually sat in 2023 — interest coverage
 breaches covenant and equity is wiped out under the same stress. (An
 earlier version of this walkthrough ran on Microsoft; at MSFT's scale the
 same downside left recovery flat at 100% even at 6x, which is itself a
-real finding — see `LIMITATIONS.md` — but a much weaker demonstration of
+real finding see `LIMITATIONS.md` — but a much weaker demonstration of
 what this module is for.)
 
 ## Repo structure
@@ -149,6 +149,6 @@ pytest
 precedent/credit-overlay pipelines end to end on synthetic data. Not
 covered: `data/fetch.py` itself, since meaningfully testing a live,
 unofficial external API is out of scope for "basic tests for the pure-math
-functions" — see `LIMITATIONS.md`.
+functions" see `LIMITATIONS.md`.
 
 

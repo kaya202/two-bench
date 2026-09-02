@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/OWNER/REPO/actions/workflows/tests.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/tests.yml)
 
-Python valuation engine — DCF, trading comparables, and precedent
+Python valuation engine. DCF, trading comparables, and precedent
 transactions built around a **credit-analysis overlay** that every method
 feeds into: given an Enterprise Value from any of the three, what can this
 company support in debt, and what does a lender actually recover if it

@@ -6,7 +6,7 @@ It's organized in three parts: what was actually verified against live data,
 what the toolkit deliberately does *not* do (and why), and what still needs
 a decision from the project owner before this is "done."
 
-## What has actually been tested
+## Tested
 
 Every module was exercised against live yfinance data during development,
 not just unit-level logic. The walkthrough notebook and README screenshots
@@ -231,19 +231,3 @@ of this document have since been made explicitly by the project owner:
    sourcing mattered more than count). Separately, 2 more real cruise-
    sector deals were added specifically to support the CCL walkthrough,
    for the reason explained under "Small sample sizes" above.
-
-### What's still genuinely open
-
-1. **Companion repo links.** The README has placeholder text (`[Bond
-   Default Model](#)` / `[LBO Scenario Analyzer](#)`) where the two
-   companion-repo links belong. Quickest path: fill these in directly in
-   `README.md` rather than routing back through further requests.
-2. **CI badge URL.** The README's CI badge points at
-   `github.com/OWNER/REPO/actions/...` — needs the real GitHub path
-   substituted in once this repo has one, or the badge will show broken.
-3. **LICENSE copyright name.** `LICENSE` currently reads
-   `Copyright (c) 2026 [Your Name]` — needs the actual name filled in.
-
-This file is linked from the README's [Known limitations](README.md#known-limitations)
-section, so it stays visible to anyone reviewing the repo rather than
-buried in commit history.

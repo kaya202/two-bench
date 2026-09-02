@@ -2,13 +2,11 @@
 
 [![tests](https://github.com/OWNER/REPO/actions/workflows/tests.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/tests.yml)
 
-A modular Python valuation engine — DCF, trading comparables, and precedent
+Python valuation engine — DCF, trading comparables, and precedent
 transactions — built around a **credit-analysis overlay** that every method
 feeds into: given an Enterprise Value from any of the three, what can this
 company support in debt, and what does a lender actually recover if it
-doesn't work out? Most student valuation repos stop at "what is this
-company worth"; this one carries that answer through to the question a
-direct lending / leveraged finance analyst asks next.
+doesn't work out? 
 
 Run end to end on a real company (**Carnival Corporation, CCL**) in
 [`notebooks/walkthrough.ipynb`](notebooks/walkthrough.ipynb) — DCF with a
@@ -20,11 +18,6 @@ leverage peaked around **6.8x at the end of 2023** and has been paid down
 to roughly **3.1x–3.4x** since — a real, recent leverage path that the
 credit overlay's 3x–6x sweep directly brackets, rather than a hypothetical
 stress range.
-
-> **This project complements two companion repos applying the same credit
-> lens elsewhere** — a bond default / recovery model and an LBO scenario
-> analyzer. *(Links to be added here once those repos are public —
-> `[Bond Default Model](#)` · `[LBO Scenario Analyzer](#)`.)*
 
 ## Football Field & Credit Overlay
 
@@ -78,8 +71,7 @@ pip install -r requirements.txt
 jupyter notebook notebooks/walkthrough.ipynb
 ```
 
-Or as an editable install (recommended if you also plan to run the tests
-or import the package from elsewhere):
+Or as an editable install:
 
 ```bash
 pip install -e ".[dev]"
@@ -159,18 +151,4 @@ covered: `data/fetch.py` itself, since meaningfully testing a live,
 unofficial external API is out of scope for "basic tests for the pure-math
 functions" — see `LIMITATIONS.md`.
 
-## Known limitations
 
-This project has a dedicated **[`LIMITATIONS.md`](LIMITATIONS.md)** —
-what was actually verified against live data, every deliberate
-simplification stated with its reasoning (currency handling, WACC's
-net-debt-as-market-value-of-debt proxy, the credit overlay's single-tranche
-assumption, small peer/deal sample sizes, and more), and open questions
-still pending a decision. Worth reading before assuming a number here is
-wrong — several of the more surprising outputs (CCL's DCF landing well
-below every other method's range, equity fully wiped out at 6x leverage
-under stress) are real, disclosed findings, not bugs.
-
-## License
-
-[MIT](LICENSE).
